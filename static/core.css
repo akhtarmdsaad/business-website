@@ -1,0 +1,11 @@
+form{
+    padding: 10px;
+}
+
+div.label{
+    text-transform: capitalize;
+    display: inline-block;
+    padding: 0px 5px;
+    font-size: larger;
+    font-weight: 500;
+}
