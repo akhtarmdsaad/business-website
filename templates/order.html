@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form method="post" action="{% url 'order' %}" class="form">
+  <div class="form-group">
+    <label for="name">name</label>
+    <input type="text"
+      class="form-control" name="name" id="name" aria-describedby="name" placeholder="name" required>
+    <small id="name" class="form-text text-muted">Enter your name</small>
+  </div>
+  <div class="form-group">
+    <label for="phone">phone</label>
+    <input type="number"
+      class="form-control" name="phone" id="phone" aria-describedby="phone" placeholder="phone" required>
+    <small id="phone" class="form-text text-muted">Enter your phone number</small>
+  </div>
+  <div class="form-group">
+    <label for="trips">Trips</label>
+    <input type="number"
+      class="form-control" name="trips" id="trips" aria-describedby="trips" placeholder="no. of trips">
+    <small id="trips" class="form-text text-muted">Enter no of Trips</small>
+  </div>
+  {% for elem in form %}
+    
+  {% endfor %}
+
+</form>
+
+{% endblock body %}

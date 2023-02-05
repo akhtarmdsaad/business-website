@@ -4,7 +4,9 @@
 <head>
 
 <title>{% block title %}{% endblock title %} | AH Bricks</title>
+<link href="{% static 'bootstrap.css' %}" rel="stylesheet">
 <link href="{% static 'tailwind.css' %}" rel="stylesheet">
+<link href="{% static 'core.css' %}" rel="stylesheet">
 
 </head>
 
@@ -16,10 +18,11 @@
       <span class="ml-3 text-xl">AH Bricks</span>
     </a>
     <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      <a href="/"  class="mr-5 hover:text-white">Home</a>
-      <a href="/services" class="mr-5 hover:text-white">Services</a>
-      <a href="/about" class="mr-5 hover:text-white">About</a>
-      <a href="/contact" class="mr-5 hover:text-white">Contact</a>
+      <a href={% url 'home' %}  class="mr-5 hover:text-white">Home</a>
+      <a href="{% url 'services' %}" class="mr-5 hover:text-white">Services</a>
+      <a href="{% url 'order' %}" class="mr-5 hover:text-white">Order</a>
+      <a href="{% url 'about' %}" class="mr-5 hover:text-white">About</a>
+      <a href="{% url 'contact' %}" class="mr-5 hover:text-white">Contact</a>
     </nav>
 	<a href="tel:+91 7008507858">
     <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Call Us
