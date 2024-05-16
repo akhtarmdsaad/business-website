@@ -1,0 +1,8 @@
+assets/
+*.pyc
+*/__pycache__/*
+todo.md
+db.sqlite3
+migrations/
+.vs/
+
