@@ -1,39 +1,57 @@
 {% extends 'base.html' %}
 
+{% block title %} Order {% endblock title %}
+
 {% block body %}
-<form method="post" action="{% url 'order' %}" class="form">
-  {% csrf_token %}
-  {% for msg in messages %}
-    <h6>{{msg}}</h6>
-  {% endfor %}
-  <div class="form-group">
-    <label for="name">name</label>
-    <input type="text"
-      class="form-control" name="name" id="name" aria-describedby="name" placeholder="name" required>
-    
-  </div>
-  <div class="form-group">
-    <label for="phone">phone</label>
-    <input type="number"
-      class="form-control" name="phone" id="phone" aria-describedby="phone" placeholder="phone" required>
-  <div class="form-group">
-    <label for="address">Address</label>
-    <textarea class="form-control" name="address" id="address" rows="2"></textarea>
-  </div>
-  </div>
-  <div class="form-group">
-    <label for="trips">Trips</label>
-    <input type="number"
-      class="form-control" name="trips" id="trips" aria-describedby="trips" placeholder="no. of trips">
-    
-  </div>
-  {{form}}
-  <button type="submit" class="btn btn-primary">Submit</button>
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-5 mx-auto">
+    {% for msg in messages %}
+          <h6 class="alert alert-success">{{msg}}</h6>
+    {% endfor %}
+    <div class="flex flex-wrap w-full mb-10">
+      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Place an Order</h1>
+        <div class="h-2 w-20 bg-indigo-500 rounded"></div>
+      </div>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <form method="post" action="{% url 'order' %}" class="form container">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text"
+            class="form-control" name="name" id="name" aria-describedby="name" placeholder="Enter your Name" required>    
+        </div>
+        <div class="form-group mt-2">
+          <label for="phone">Phone</label>
+          <input type="number"
+            class="form-control" name="phone" id="phone" aria-describedby="phone" placeholder="Enter your phone no" required>
+        <div class="form-group mt-2">
+          <label for="address">Address</label>
+          <textarea class="form-control" name="address" id="address" rows="2"></textarea>
+        </div>
+        </div>
+        <div class="form-group mt-2 col-sm-2">
+          <label for="trips">Quantity</label>
+          <input type="number"
+            class="form-control" name="trips" id="trips" aria-describedby="trips" placeholder="">
+        </div>
+        <div class="form-group">
+          {% for field in form %}
+            <div class="fieldWrapper mt-2 col-sm-6">
+                {{ field.errors }}
+                {{ field.label_tag }} 
+                {{ field }}
+            </div>
+          {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Submit</button>
 
-</form>
+      </form>
 
-{% if request.user.is_authenticated %}
-  <a href="{% url 'see_order' %}">See ALL orders</a>
-{% endif %}
-
+      {% if request.user.is_authenticated %}
+        <a href="{% url 'see_order' %}">See ALL orders</a>
+      {% endif %}
+  </div>
+</section>
 {% endblock body %}

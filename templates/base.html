@@ -14,7 +14,7 @@
 <header class="text-gray-400 bg-gray-900 body-font">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-      <img src="{% static 'logo.png' %}" alt="logo">
+      <img src="{% static 'logo.png' %}" alt="logo" width=64 height=64>
       <span class="ml-3 text-xl">AH Bricks</span>
     </a>
     <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
@@ -23,14 +23,15 @@
       <a href="{% url 'order' %}" class="mr-5 hover:text-white">Order</a>
       <a href="{% url 'about' %}" class="mr-5 hover:text-white">About</a>
       <a href="{% url 'contact' %}" class="mr-5 hover:text-white">Contact</a>
+      <a href="tel:+91 7008507858">
+        <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 mr-5 hover:text-white">Call Us
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </a>
     </nav>
-	<a href="tel:+91 7008507858">
-    <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Call Us
-      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"></path>
-      </svg>
-    </button>
-	</a>
+	
   </div>
 </header>
 
@@ -40,12 +41,26 @@
 <footer class="text-gray-400 bg-gray-900 body-font">
   <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-      <img src="{% static 'logo.png' %}" alt="logo">
+      <img src="{% static 'logo.png' %}" alt="logo"  width=64 height=64>
       <span class="ml-3 text-xl">Ah Bricks</span>
     </a>
-    <p class="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">© 2023 Ah Bricks       {% comment %} <a href="https://twitter.com/knyttneve" class="text-gray-500 ml-1" target="_blank" rel="noopener noreferrer">@knyttneve</a> {% endcomment %}
-    </p>
-    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a href={% url 'home' %}  class="mr-5 hover:text-white">Home</a>
+      <a href="{% url 'services' %}" class="mr-5 hover:text-white">Services</a>
+      <a href="{% url 'order' %}" class="mr-5 hover:text-white">Order</a>
+      <a href="{% url 'about' %}" class="mr-5 hover:text-white">About</a>
+      <a href="{% url 'contact' %}" class="mr-5 hover:text-white">Contact</a>
+      <a href="tel:+91 7008507858">
+        <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 mr-5 hover:text-white">Call Us
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </a>
+    </nav>
+	
+    <!-- These invisible items are Social media apps. But we dont have any profile in these sites. -->
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start " style="visibility:hidden">
       <a class="text-gray-400">
         <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
           <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
