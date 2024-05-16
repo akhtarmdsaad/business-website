@@ -1,10 +1,11 @@
-I've created a refined README.md file for your AH Bricks website, incorporating the suggested website pages and contact information:
+# **Business Website**
 
-**AH Bricks Website**
+![logo](https://github.com/akhtarmdsaad/business-website/assets/57033728/3602ec89-16db-4a4b-a145-db05560b565b)
 
 **Company:** AH Bricks
 
-**Description:** AH Bricks is your one-stop shop for construction materials and reliable rentals in Bhubaneswar, Odisha, India. We provide high-quality products and services at competitive prices, ensuring a strong foundation for your building projects.
+
+**Description:** AH Bricks is your one-stop shop for construction materials and reliable rentals in Bisra, Odisha, India. We provide high-quality products and services at competitive prices, ensuring a strong foundation for your building projects.
 
 **Products and Services:**
 
@@ -44,3 +45,31 @@ I've created a refined README.md file for your AH Bricks website, incorporating 
     - Name: (Required)
     - Email: (Required)
     - Message: (Required)
+
+## Development Setup
+
+The AH Bricks website is built using a combination of front-end and back-end technologies:  
+#### **Front-End:**  
+  <p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=html,css,js,bootstrap" />
+  </a>
+</p>
+
+* **HTML:** The fundamental building block of web pages, defining the structure and content.
+* **CSS:** Provides styling for the website, controlling layout, colors, fonts, and visual elements.
+* **JavaScript:** Adds interactivity and dynamic behavior to the website, such as form validation or animations.
+* **Bootstrap :** A popular CSS framework that can simplify website development by providing pre-built styles and components.
+* **Google Maps:** Integrated into the "About Us" page to display your business location.
+
+#### **Back-End:**
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=django,sqlite" />
+  </a>
+</p>
+
+
+* **Django :** A high-level Python web framework that can streamline development and manage the website's data and functionality.
+* **Sqlite3 :** A lightweight database management system that can be used to store and manage website data.
+
