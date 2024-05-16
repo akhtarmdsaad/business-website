@@ -46,7 +46,17 @@
     - Email: (Required)
     - Message: (Required)
 
-## Development Setup
+## Setup
+Paste the code in terminal
+```
+git clone https://github.com/akhtarmdsaad/business-website.git
+cd business-website
+python manage.py runserver
+```
+
+Open Browser and type: `localhost:8000` in url bar.
+
+## Development 
 
 The AH Bricks website is built using a combination of front-end and back-end technologies:  
 #### **Front-End:**  
